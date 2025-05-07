@@ -12,7 +12,7 @@ MyString func()
 }
 
 
-int main2()
+int main()
 {
 	MyString ms1("abc def");
 	MyString ms2;
@@ -39,10 +39,17 @@ int main2()
 
 	ms1 = func();
 
+	cout << ms1; //"ssss"
+	
+	MyString ms;
+	cin >> ms;
+
+	cin >> ms2;
+
 
 }
 
-int main()
+void mai2n()
 {
 	string s1;
 	string s2 = "abc dhsgjlgjk%#";

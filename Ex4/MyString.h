@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+using namespace std;
+
 
 class MyString
 {
@@ -27,7 +30,8 @@ public:
 	MyString operator+(const MyString& ms) const;
 	MyString operator*(int n) const;
 
-
+	friend ostream& operator<<(ostream& os, const MyString& ms);
+	friend istream& operator>>(istream& is, MyString& ms);
 
 
 };

@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "MyString.h"
 #include <cstring>
 #include <iostream>
@@ -14,6 +15,7 @@ MyString::MyString(const char* s)
 	else
 	{
 		len = 0;
+		str = nullptr;
 	}
 }
 
@@ -147,4 +149,28 @@ MyString MyString::operator*(int n) const
 	if (s)
 		delete[] s;
 	return t;
+}
+
+ostream& operator<<(ostream& os, const MyString& ms)
+{
+	for (int i = 0; i < ms.len; i++)
+		os << ms.str[i];
+	return os;
+}
+
+istream& operator>>(istream& is, MyString& ms)
+{
+	//option 2
+	string s;
+	is >> s;
+	MyString t(s.c_str());
+	ms = t;
+	return is;
+
+	//option 1
+	//char s[100];
+	//is >> s;
+	//MyString t(s);
+	//ms = t;
+	//return is;
 }

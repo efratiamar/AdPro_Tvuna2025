@@ -52,7 +52,7 @@ void Vector::addLast(int k)
 	if (size < capacity)
 		arr[size++] = k;
 	else
-		cout << "Vector is full" << endl
+		cout << "Vector is full" << endl;
 }
 
 int Vector::lastValue() const
@@ -92,4 +92,11 @@ void Vector::sort()
 			arr[j] = arr[j - 1];
 		arr[j] = tmp;
 	}
+}
+
+ostream& operator<<(ostream& os, const Vector& v2)
+{
+	for (int i = 0; i < v2.size; i++)
+		os << v2.arr[i] << " ";
+	return os;
 }

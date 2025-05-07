@@ -1,3 +1,45 @@
+
+#include "Rational.h"
+
+int g(int x)
+{
+	cout << x;
+	Rational r1;
+	r1.mone = 5;
+	return x;
+}
+
+int main()
+{
+	//g(5);
+
+	Rational r1(4, 3);
+	Rational r2(4, 3);
+
+	Rational r3 = r1 * r2;
+	r3 = 2 * r1;
+	r3 = r1 * 7;
+
+	cout << "vzvds";
+	cout << 6;
+
+	r3.print();
+
+	r3 = r2 = r1;
+
+	cout << r3;
+	cout << r3 << " gggg " << r1;
+	
+	int x, y;
+	cin >> x >> y;
+
+	cin >> r3;
+
+
+}
+
+
+
 class Rect
 {
 	int width;
@@ -24,7 +66,10 @@ public:
 	}
 };
 
-int main()
+
+
+
+void main2()
 {
 
 	int a = 4, b = 8, c = 9;
@@ -49,5 +94,5 @@ int main()
 
 
 	//..
-	r1 += (r2 + r3); //compilation error
+	//r1 += (r2 + r3); //compilation error
 }
