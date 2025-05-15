@@ -18,5 +18,5 @@ public:
     void setBalance(double balanceValue);
     double getBalance() const;
     friend ostream& operator<< (ostream&, ClientData&);
-}; // end class CientData
+};
 

@@ -32,16 +32,13 @@ int initFile(int n)
 		cout << "error" << endl;
 		return -1;
 	}
-	ClientData cd;
+	ClientData empty;
 	for (int i = 0; i < n; i++)
-	{
-		fo.write((char*)&cd, sizeof(ClientData));
-	}
+		fo.write((char*)&empty, sizeof(ClientData));
 
 	fo.close();
-
-
 }
+
 int getAccount()
 {
 	int accountNumber;
@@ -70,7 +67,6 @@ void newClient(fstream& fInOut)
 
 	fInOut.seekp(sizeof(ClientData) * (id - 1));
 	fInOut.write((char*)&newCD, sizeof(ClientData));
-
 }
 
 void deleteClient(fstream& fInOut)
@@ -87,7 +83,7 @@ void deleteClient(fstream& fInOut)
 		return;
 	}
 	
-	ClientData empty; //XXX create empty object and writ it instead of the exisiting object!!!!
+	ClientData empty; //XXX create empty object and writ it instead of the existing object!!!!
 	fInOut.seekp(sizeof(ClientData) * (id - 1));
 	fInOut.write((char*)&empty, sizeof(ClientData));
 }
@@ -114,7 +110,6 @@ void updateClient(fstream& fInOut)
 
 	fInOut.seekp(sizeof(ClientData) * (id - 1));
 	fInOut.write((char*)&cd, sizeof(ClientData));
-
 }
 
 void printAllClientsToTextFile(fstream& fInOut)
