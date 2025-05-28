@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{eedd2773-93ce-4450-ba5c-e611a4e484de}</ProjectGuid>
-    <RootNamespace>Ex7</RootNamespace>
+    <ProjectGuid>{df1bb956-8237-4a96-bf79-081ad81c1091}</ProjectGuid>
+    <RootNamespace>Ex8</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,13 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="List.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="TailList.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="List.h" />
-    <ClInclude Include="TailList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

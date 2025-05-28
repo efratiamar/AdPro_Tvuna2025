@@ -2,7 +2,17 @@
 #include "List.h"
 using namespace std;
 
+#include "TailList.h"
+
 int main()
+{
+    TailList tl;
+
+    
+}
+
+
+int mainList()
 {
     int element;
     List ls1, ls2;
